@@ -153,9 +153,9 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " code compiler
 augroup compileandrun
     autocmd!
-    autocmd filetype python nnoremap <f9> :w <bar> :!python % <cr>
+    autocmd filetype python nnoremap <C-/> :w <bar> :!python % <cr>
     autocmd filetype cpp nnoremap <C-/> :w <bar> !g++ -std=c++11 -O2 -Wall % -o %:r && %:r.exe <CR>
-    autocmd filetype c nnoremap <f9> :w <bar> !make %:r && ./%:r <cr>
-    autocmd filetype java nnoremap <f9> :w <bar> !javac % && java %:r <cr>
+    autocmd filetype c nnoremap <C-/> :w <bar> !make %:r && ./%:r <cr>
+    autocmd filetype java nnoremap <C-/> :w <bar> !javac % && java %:r <cr>
 augroup END
 
